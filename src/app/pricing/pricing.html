@@ -1,0 +1,63 @@
+<section id="pricing" class="py-24 bg-[#12141C] text-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gradient">Simple, Transparent Pricing</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto mb-8">
+        Choose the plan that best fits your trading needs. All plans include our core platform features.
+      </p>
+      
+      <div class="inline-flex p-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full mb-8">
+        <button
+          class="px-4 py-2 rounded-full transition-colors"
+          [ngClass]="{'bg-crypto-purple text-white': billingCycle==='monthly','text-gray-400': billingCycle!=='monthly'}"
+          (click)="setBillingCycle('monthly')"
+        >
+          Monthly
+        </button>
+        <button
+          class="px-4 py-2 rounded-full transition-colors"
+          [ngClass]="{'bg-crypto-purple text-white': billingCycle==='annual','text-gray-400': billingCycle!=='annual'}"
+          (click)="setBillingCycle('annual')"
+        >
+          Annual <span class="text-xs font-medium">Save 20%</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div *ngFor="let plan of pricingPlans; let i = index"
+           class="bg-white/5 backdrop-blur-sm border rounded-xl overflow-hidden"
+           [ngClass]="plan.highlighted ? 'border-crypto-purple relative shadow-xl shadow-crypto-purple/10' : 'border-white/10'">
+        <div *ngIf="plan.highlighted" class="bg-crypto-purple text-white text-center py-1 text-sm font-medium">
+          Most Popular
+        </div>
+
+        <div class="p-8">
+          <h3 class="text-xl font-semibold mb-2 text-white">{{ plan.name }}</h3>
+          <div class="mb-4">
+            <span class="text-3xl md:text-4xl font-bold text-white">
+              {{ billingCycle === 'monthly' ? plan.price.monthly : plan.price.annual }}
+            </span>
+            <span class="text-gray-400 ml-1" *ngIf="plan.price.monthly !== '$0'">/month</span>
+          </div>
+          <p class="text-gray-400 mb-6">{{ plan.description }}</p>
+
+          <button class="w-full mb-6 px-4 py-2 rounded-lg"
+                  [ngClass]="plan.highlighted ? 'bg-crypto-purple hover:bg-crypto-dark-purple text-white' : 'bg-white/10 hover:bg-white/20 text-white'">
+            {{ plan.buttonText }}
+          </button>
+
+          <div>
+            <p class="text-sm font-medium text-gray-300 mb-4">What's included:</p>
+            <ul class="space-y-3">
+              <li *ngFor="let feature of plan.features" class="flex items-start">
+                <span class="h-5 w-5 bg-crypto-purple rounded-full mr-3 flex-shrink-0 flex items-center justify-center text-black font-bold">✓</span>
+                <span class="text-gray-400 text-sm">{{ feature }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
