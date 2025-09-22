@@ -1,5 +1,17 @@
 # SegundoParcial
 
+## 2do Parcial - Tecnologías de Internet 2-2025
+Dev: Ronaldo Cahuasiri Colque
+Tema: Universidad Adventista de Bolivia - UAB
+Curso: Tecnologías de Internet
+
+## CSS Framework
+Este proyecto usa Tailwind CSS.
+Fuente: https://tailwindcss.com/
+
+
+
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
 
 ## Development server
