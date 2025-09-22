@@ -5,6 +5,7 @@ import { Faq } from '../faq/faq';
 import { Pricing } from './../pricing/pricing';
 @Component({
   selector: 'app-ui',
+  standalone: true,
   imports: [CommonModule, Features, Faq, Pricing],
   templateUrl: './ui.html',
   styleUrl: './ui.css'

@@ -18,6 +18,29 @@ Este proyecto utiliza el template gratuito **CryptoFlow – Free Tailwind CSS Bu
 - **Licencia:** Gratuito para uso personal y comercial según los términos de ThemeWagon
 - **Documentación:** https://themewagon.com/docs/cryptoflow/
 
+## Offline Support (Home)
+
+La página principal ahora funciona **offline** gracias a un Service Worker que realiza **precaching** de los recursos esenciales:
+
+- HTML de la Home (`index.html`)
+- CSS principal y estilos
+- JS de Angular (bundle principal)
+- Imágenes clave del template (logo, hero, íconos)
+
+### Cómo funciona
+
+1. El Service Worker registra y guarda los archivos críticos en la **caché del navegador** la primera vez que se carga la Home.  
+2. Cuando el usuario visita la página sin conexión a Internet, el Service Worker entrega los archivos desde la caché, garantizando que la Home se vea y funcione correctamente.  
+3. Otros archivos opcionales pueden cargarse bajo demanda.
+
+### Prueba de Offline
+
+1. Abrir la página principal en un navegador compatible con PWA.  
+2. Abrir **DevTools > Application > Service Workers** y verificar que el Service Worker esté activo.  
+3. Desconectar Internet (modo avión).  
+4. Recargar la página: la Home debe mostrarse correctamente con estilos, imágenes y scripts funcionando.
+
+**Commit relacionado:** `feat(pwa): offline-ready home with precaching`
 
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
