@@ -40,6 +40,24 @@ La página principal ahora funciona **offline** gracias a un Service Worker que 
 3. Desconectar Internet (modo avión).  
 4. Recargar la página: la Home debe mostrarse correctamente con estilos, imágenes y scripts funcionando.
 
+## 8. Offline para la página principal
+
+**Objetivo:** Garantizar que la Home funcione sin conexión, usando precaching de HTML, CSS, JS e imágenes clave.
+
+**Implementación:**
+
+1. Se habilitó PWA en Angular:
+   ```bash
+   ng add @angular/pwa --project segundo-parcial
+   ```
+
+1. Se habilitó PWA en Angular:
+   ```bash
+   ng add @angular/pwa --project segundo-parcial
+   ```
+
+
+
 **Commit relacionado:** `feat(pwa): offline-ready home with precaching`
 
 
