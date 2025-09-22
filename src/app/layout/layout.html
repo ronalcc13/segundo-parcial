@@ -1,0 +1,269 @@
+<div className="min-h-screen overflow-x-hidden">
+  <!-- Navigation-->
+  <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+    <div class="container mx-auto px-4 flex justify-between items-center py-6">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <h1 class="text-2xl font-bold text-white">
+          Ronaldo Cc<span class="text-crypto-purple">UAB</span>
+        </h1>
+      </div>
+
+      <!-- Desktop menu -->
+      <ul class="hidden lg:flex items-center space-x-8">
+        <li>
+          <a href="#features" class="text-gray-300 hover:text-white transition-colors">Features</a>
+        </li>
+        <li>
+          <a href="#how-it-works" class="text-gray-300 hover:text-white transition-colors"
+            >How it works</a
+          >
+        </li>
+        <li>
+          <a href="#testimonials" class="text-gray-300 hover:text-white transition-colors"
+            >Testimonials</a
+          >
+        </li>
+        <li>
+          <a href="#pricing" class="text-gray-300 hover:text-white transition-colors">Pricing</a>
+        </li>
+        <li><a href="#faq" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+      </ul>
+
+      <!-- Desktop buttons -->
+      <div class="hidden lg:flex items-center space-x-4">
+        <button
+          class="text-gray-300 hover:text-white bg-transparent border border-gray-300 px-4 py-2 rounded"
+        >
+          Login
+        </button>
+        <a href="#!" class="w-full">
+          <button
+            class="bg-crypto-purple hover:bg-crypto-dark-purple text-white px-4 py-2 rounded w-full"
+          >
+            Buy Now
+          </button>
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button class="lg:hidden text-white" id="mobile-menu-toggle">
+        <!-- Icon: usa cualquier SVG o unicode para menú -->
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div
+      class="lg:hidden bg-crypto-blue/95 backdrop-blur-lg absolute top-full left-0 w-full py-4 shadow-lg hidden"
+      id="mobile-menu"
+    >
+      <div class="container mx-auto px-4">
+        <ul class="flex flex-col space-y-4">
+          <li>
+            <a href="#features" class="text-gray-300 hover:text-white block py-2">Features</a>
+          </li>
+          <li>
+            <a href="#how-it-works" class="text-gray-300 hover:text-white block py-2"
+              >How it works</a
+            >
+          </li>
+          <li>
+            <a href="#testimonials" class="text-gray-300 hover:text-white block py-2"
+              >Testimonials</a
+            >
+          </li>
+          <li><a href="#pricing" class="text-gray-300 hover:text-white block py-2">Pricing</a></li>
+          <li><a href="#faq" class="text-gray-300 hover:text-white block py-2">FAQ</a></li>
+          <li class="pt-4 flex flex-col space-y-3">
+            <button
+              class="text-gray-300 hover:text-white w-full justify-start bg-transparent border border-gray-300 px-4 py-2 rounded"
+            >
+              Login
+            </button>
+            <a href="#!">
+              <button
+                class="bg-crypto-purple hover:bg-crypto-dark-purple text-white px-4 py-2 rounded w-full"
+              >
+                Buy Now
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- AQUI DATOS NUEVOS -->
+  <router-outlet></router-outlet>
+  <!-- AQUI DATOS NUEVOS -->
+
+  <!-- Footer-->
+  <footer class="bg-[#12141C] pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-8">
+        <div class="lg:col-span-2">
+          <h2 class="text-2xl font-bold text-white mb-4">
+            Crypto<span class="text-crypto-purple">Flow</span>
+          </h2>
+          <p class="text-gray-400 mb-6 max-w-xs">
+            The most trusted cryptocurrency platform, empowering traders with innovative tools and
+            unparalleled security.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors">
+              <span class="sr-only">Facebook</span>
+            </a>
+            <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors">
+              <span class="sr-only">Twitter</span>
+            </a>
+            <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors">
+              <span class="sr-only">Instagram</span>
+            </a>
+            <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors">
+              <span class="sr-only">LinkedIn</span>
+            </a>
+            <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors">
+              <span class="sr-only">GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-white font-medium mb-4">Products</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors"
+                >Exchange</a
+              >
+            </li>
+            <li>
+              <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors"
+                >Wallet</a
+              >
+            </li>
+            <li>
+              <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors">API</a>
+            </li>
+            <li>
+              <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors"
+                >Institutional</a
+              >
+            </li>
+            <li>
+              <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors"
+                >DeFi Platform</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-white font-medium mb-4">Resources</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors">Blog</a>
+            </li>
+            <li>
+              <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors"
+                >Tutorials</a
+              >
+            </li>
+            <li>
+              <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors"
+                >Market Data</a
+              >
+            </li>
+            <li>
+              <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors"
+                >Documentation</a
+              >
+            </li>
+            <li>
+              <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors"
+                >Help Center</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-white font-medium mb-4">Company</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors"
+                >Careers</a
+              >
+            </li>
+            <li>
+              <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors"
+                >Press</a
+              >
+            </li>
+            <li>
+              <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors"
+                >Legal & Privacy</a
+              >
+            </li>
+            <li>
+              <a href="#!" class="text-gray-400 hover:text-crypto-purple transition-colors"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            &copy; 2025 CryptoFlow. All rights reserved. ~ Distributed By
+            <a
+              href="https://themewagon.com/"
+              target="_blank"
+              class="text-crypto-purple hover:underline"
+              >ThemeWagon</a
+            >
+          </p>
+          <div class="flex space-x-6">
+            <a href="#!" class="text-gray-400 hover:text-crypto-purple text-sm transition-colors"
+              >Terms of Service</a
+            >
+            <a href="#!" class="text-gray-400 hover:text-crypto-purple text-sm transition-colors"
+              >Privacy Policy</a
+            >
+            <a href="#!" class="text-gray-400 hover:text-crypto-purple text-sm transition-colors"
+              >Cookie Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script>
+  // Toggle mobile menu
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      navbar.classList.add('bg-crypto-blue', 'backdrop-blur-md', 'py-3', 'shadow-lg');
+      navbar.classList.remove('py-6');
+    } else {
+      navbar.classList.remove('bg-crypto-blue', 'backdrop-blur-md', 'py-3', 'shadow-lg');
+      navbar.classList.add('py-6');
+    }
+  });
+</script>
