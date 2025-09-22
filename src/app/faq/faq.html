@@ -2,20 +2,31 @@
   <div class="container mx-auto px-4">
     <div class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gradient">Frequently Asked Questions</h2>
-      <p class="text-gray-400 max-w-2xl mx-auto">
+      <p class="text-gray-300 max-w-2xl mx-auto">
         Got questions about CryptoFlow? We've got answers. If you don't see what you're looking for, reach out to our support team.
       </p>
     </div>
 
     <div class="max-w-3xl mx-auto space-y-4">
       <div *ngFor="let item of faqItems; let i = index" class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden">
-        <button 
-          class="w-full text-left px-6 py-4 flex justify-between items-center hover:text-crypto-purple"
-          (click)="toggle(i)">
-          <span>{{ item.question }}</span>
-          <span class="text-2xl">{{ openIndex === i ? '-' : '+' }}</span>
+        <button
+          class="w-full text-left px-6 py-4 flex justify-between items-center hover:text-crypto-purple focus:outline-none focus:ring-2 focus:ring-crypto-purple rounded"
+          (click)="toggle(i)"
+          role="button"
+          [attr.aria-expanded]="openIndex === i"
+          [attr.aria-controls]="'faq-panel-' + i"
+        >
+          <h3 id="{{'faq-question-' + i}}" class="text-lg font-semibold">{{ item.question }}</h3>
+          <span class="text-2xl">{{ openIndex === i ? '−' : '+' }}</span>
         </button>
-        <div *ngIf="openIndex === i" class="px-6 pb-4 text-gray-400 transition-all duration-300">
+
+        <div
+          *ngIf="openIndex === i"
+          [id]="'faq-panel-' + i"
+          role="region"
+          [attr.aria-labelledby]="'faq-question-' + i"
+          class="px-6 py-4 text-gray-300 transition-all duration-300"
+        >
           {{ item.answer }}
         </div>
       </div>

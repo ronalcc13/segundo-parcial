@@ -1,6 +1,6 @@
 <section class="relative min-h-screen flex flex-col justify-center overflow-hidden bg-gradient-hero hero-glow bg-gray-900/90">
   <!-- Animated Background Elements -->
-  <div class="absolute inset-0 overflow-hidden">
+  <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
     <div class="absolute top-1/4 left-10 w-72 h-72 bg-crypto-purple/10 rounded-full filter blur-3xl animate-pulse-slow"></div>
     <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-crypto-light-purple/10 rounded-full filter blur-3xl animate-pulse-slow" style="animation-delay:1s;"></div>
   </div>
@@ -12,34 +12,40 @@
         <div class="inline-flex items-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
           <span class="text-xs font-medium text-crypto-purple mr-2">New Feature</span>
           <span class="text-xs text-gray-300">AI-Powered Trading Signals</span>
-          <span class="ml-1 text-gray-400">→</span>
+          <span class="ml-1 text-gray-400" aria-hidden="true">→</span>
         </div>
+
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-          <span class="text-gradient">Trade Crypto</span> with <span class="text-gray-100 hover:text-cyan-400">Confidence & Clarity</span>
+          <span class="text-purple-300">Trade Crypto</span> with <span class="text-gray-100 hover:text-cyan-400">Confidence & Clarity</span>
         </h1>
+
         <p class="text-lg text-gray-300 mb-8 max-w-lg">
           Experience seamless cryptocurrency trading with real-time analytics, AI-powered insights, and zero commission fees.
         </p>
+
         <div class="flex flex-col sm:flex-row gap-4">
-          <button class="bg-crypto-purple hover:bg-crypto-dark-purple text-white px-8 py-6 rounded flex items-center justify-center gap-2">
-            Start Trading → 
+          <button class="bg-crypto-purple hover:bg-crypto-dark-purple text-white px-8 py-6 rounded flex items-center justify-center gap-2"
+                  aria-label="Start Trading">
+            Start Trading →
           </button>
-          <button class="border border-gray-700 text-white hover:bg-white/5 px-8 py-6 rounded flex items-center justify-center gap-2">
+          <button class="border border-gray-700 text-white hover:bg-white/5 px-8 py-6 rounded flex items-center justify-center gap-2"
+                  aria-label="View Demo">
             View Demo ↗
           </button>
         </div>
+
         <div class="mt-8 flex items-center space-x-6">
-          <div>
+          <div role="region" aria-label="Trading Volume">
             <p class="text-2xl font-bold text-white">$2.5B+</p>
             <p class="text-sm text-gray-400">Trading Volume</p>
           </div>
-          <div class="h-12 w-px bg-gray-700"></div>
-          <div>
+          <div class="h-12 w-px bg-gray-700" aria-hidden="true"></div>
+          <div role="region" aria-label="Active Traders">
             <p class="text-2xl font-bold text-white">120K+</p>
             <p class="text-sm text-gray-400">Active Traders</p>
           </div>
-          <div class="h-12 w-px bg-gray-700"></div>
-          <div>
+          <div class="h-12 w-px bg-gray-700" aria-hidden="true"></div>
+          <div role="region" aria-label="Global Markets">
             <p class="text-2xl font-bold text-white">50+</p>
             <p class="text-sm text-gray-400">Global Markets</p>
           </div>
@@ -53,12 +59,12 @@
             src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&h=800" 
             alt="Trading platform dashboard" 
             class="rounded-xl shadow-2xl border border-white/10"
-          />
+          >
 
           <!-- 24h Change Card -->
-          <div class="absolute -right-6 -bottom-6 bg-crypto-purple/20 backdrop-blur-md rounded-lg p-4 border border-crypto-purple/30 shadow-lg flex items-center space-x-3">
+          <div class="absolute -right-6 -bottom-6 bg-crypto-purple/20 backdrop-blur-md rounded-lg p-4 border border-crypto-purple/30 shadow-lg flex items-center space-x-3" role="status" aria-label="24 hour change">
             <div class="h-10 w-10 bg-green-500/20 rounded-full flex items-center justify-center">
-              <span class="text-green-500 font-bold">↑</span>
+              <span class="text-green-500 font-bold" aria-hidden="true">↑</span>
             </div>
             <div>
               <p class="text-xs text-gray-400">24h Change</p>
@@ -67,9 +73,9 @@
           </div>
 
           <!-- Security Level Card -->
-          <div class="absolute -left-6 -top-6 bg-crypto-purple/20 backdrop-blur-md rounded-lg p-4 border border-crypto-purple/30 shadow-lg flex items-center space-x-3">
+          <div class="absolute -left-6 -top-6 bg-crypto-purple/20 backdrop-blur-md rounded-lg p-4 border border-crypto-purple/30 shadow-lg flex items-center space-x-3" role="status" aria-label="Security Level: Enterprise">
             <div class="h-10 w-10 bg-crypto-purple/20 rounded-full flex items-center justify-center">
-              <span class="text-crypto-purple font-bold">🔒</span>
+              <span class="text-crypto-purple font-bold" aria-hidden="true">🔒</span>
             </div>
             <div>
               <p class="text-xs text-gray-400">Security Level</p>
