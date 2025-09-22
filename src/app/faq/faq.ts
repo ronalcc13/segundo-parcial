@@ -4,11 +4,11 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-faq',
   standalone: true,
-  imports: [CommonModule], // Esto es obligatorio para ngFor/ngIf
+  imports: [CommonModule],
   templateUrl: './faq.html',
   styleUrls: ['./faq.css']
 })
-export class FaqComponent {
+export class Faq {
   faqItems = [
     { question: 'What is CryptoFlow?', answer: 'CryptoFlow is a professional crypto trading platform.' },
     { question: 'Is there a free trial?', answer: 'Yes, you can try all features with a 14-day free trial.' },
