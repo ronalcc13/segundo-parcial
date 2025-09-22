@@ -9,6 +9,14 @@ Curso: Tecnologías de Internet
 Este proyecto usa Tailwind CSS.
 Fuente: https://tailwindcss.com/
 
+## Template utilizado
+
+Este proyecto utiliza el template gratuito **CryptoFlow – Free Tailwind CSS Business & Corporate Template** obtenido de [ThemeWagon](https://themewagon.com/themes/cryptoflow/).
+
+- **Autor:** ThemeWagon
+- **Fuente:** https://themewagon.com/themes/cryptoflow/
+- **Licencia:** Gratuito para uso personal y comercial según los términos de ThemeWagon
+- **Documentación:** https://themewagon.com/docs/cryptoflow/
 
 
 
