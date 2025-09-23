@@ -56,6 +56,17 @@ La página principal ahora funciona **offline** gracias a un Service Worker que 
    ng add @angular/pwa --project segundo-parcial
    ```
 
+## Notificación local
+
+Se añadió en la Home dos botones:
+- **Permitir notificaciones** → solicita permiso al navegador.
+- **Probar notificación** → dispara una notificación de prueba.
+
+### Prueba
+1. Ingresar a la Home en un navegador que soporte notificaciones.
+2. Presionar "Permitir notificaciones".
+3. Luego hacer clic en "Probar notificación".
+4. Se debe mostrar un mensaje tipo push con título y cuerpo.
 
 
 **Commit relacionado:** `feat(pwa): offline-ready home with precaching`
