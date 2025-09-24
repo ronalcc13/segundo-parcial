@@ -15,7 +15,11 @@ export class Home {
   permitir() {
     this.notifService.requestPermission().then((perm: NotificationPermission) => {
       if (perm === 'granted') {
-        this.notifService.show('Permiso concedido', 'Ahora puedes recibir notificaciones', 'success');
+        this.notifService.show(
+          'Permiso concedido',
+          'Ahora puedes recibir notificaciones',
+          'success'
+        );
       } else {
         this.notifService.show('Permiso denegado', 'No podrás recibir notificaciones', 'error');
       }
@@ -39,5 +43,8 @@ export class Home {
   async confirmar() {
     const ok = await this.notifService.confirm('¿Eliminar?', 'Esta acción no se puede deshacer.');
     if (ok) this.notifService.success('Registro eliminado');
+  }
+  alertaToast() {
+    this.notifService.toast('¡Notificación desde la esquina superior derecha!', 'success');
   }
 }

@@ -45,4 +45,23 @@ export class NotificationService {
     });
     return result.isConfirmed;
   }
+
+  /** SweetAlert2: toast en esquina superior derecha */
+  toast(message: string, icon: SweetAlertIcon = 'info', timer: number = 3000) {
+    Swal.fire({
+      toast: true,
+      position: 'top-end',       // esquina superior derecha
+      icon,
+      title: message,
+      showConfirmButton: false,
+      timer: timer,
+      timerProgressBar: true,
+      background: '#333',        // color de fondo
+      color: '#fff',             // texto blanco
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer);
+        toast.addEventListener('mouseleave', Swal.resumeTimer);
+      }
+    });
+  }
 }
