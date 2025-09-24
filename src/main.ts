@@ -7,7 +7,7 @@ import { isDevMode } from '@angular/core';
 bootstrapApplication(App, {
   providers: [
     ...appConfig.providers,
-    provideServiceWorker('/ngsw-worker.js', {
+    provideServiceWorker('/segundo-parcial/ngsw-worker.js', {
       enabled: !isDevMode(), // ✅ solo activa en producción
       registrationStrategy: 'registerWhenStable:30000',
     }),

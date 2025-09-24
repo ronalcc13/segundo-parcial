@@ -30,13 +30,6 @@
             ]
           },
           "configurations": {
-            "href": {
-              "index": {
-                "input": "src/index.html",
-                "output": "index.html",
-                "baseHref": "/segundo-parcial/"
-              }
-            },
             "production": {
               "budgets": [
                 {
